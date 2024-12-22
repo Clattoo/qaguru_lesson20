@@ -14,8 +14,6 @@ import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
-
 public class BrowserstackDriver implements WebDriverProvider {
 
     public static CredentialsConfig credentialsConfig = ConfigFactory.create(CredentialsConfig.class, System.getProperties());
@@ -30,10 +28,10 @@ public class BrowserstackDriver implements WebDriverProvider {
         caps.setCapability("browserstack.user", credentialsConfig.getUser());
         caps.setCapability("browserstack.key", credentialsConfig.getKey());
 
-        caps.setCapability("app", appConfig.getApp());
-
         caps.setCapability("device", environmentConfig.getDevice());
         caps.setCapability("os_version", environmentConfig.getVersion());
+
+        caps.setCapability("app", appConfig.getApp());
 
         caps.setCapability("project", appConfig.getProjectName());
         caps.setCapability("build", appConfig.getBuildName());
