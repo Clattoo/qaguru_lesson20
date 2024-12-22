@@ -19,7 +19,7 @@ public class SearchScreen {
     @Step("Проверить наличие результатов поиска")
     public SearchScreen openArticle() {
 
-        $$(id("org.wikipedia.alpha:id/search_results_list")).first().click();
+        $$(id("org.wikipedia.alpha:id/page_list_item_title")).first().click();
 
         return this;
     }

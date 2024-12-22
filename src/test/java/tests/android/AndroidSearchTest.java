@@ -1,4 +1,4 @@
-package tests;
+package tests.android;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -6,9 +6,10 @@ import org.junit.jupiter.api.Test;
 import screens.android.ErrorScreen;
 import screens.android.SearchScreen;
 import screens.android.components.SearchInputComponent;
+import tests.TestBase;
 
 
-public class SearchTest extends TestBase {
+public class AndroidSearchTest extends TestBase {
 
     SearchInputComponent searchInputComponent = new SearchInputComponent();
     SearchScreen searchScreen = new SearchScreen();
@@ -20,7 +21,7 @@ public class SearchTest extends TestBase {
     void successfulSearchTest() {
 
         searchInputComponent.clickSearchField()
-                        .typeTextSearchField("Russia");
+                        .typeTextSearchField("Al Pachino");
         searchScreen.checkSearchResults();
     }
 
@@ -30,7 +31,7 @@ public class SearchTest extends TestBase {
     void openArticleAfterSuccessfulSearchTest() {
 
         searchInputComponent.clickSearchField()
-                .typeTextSearchField("Russia");
+                .typeTextSearchField("Al Pachino");
         searchScreen.checkSearchResults()
                 .openArticle();
         errorScreen.checkError("An error occurred");
