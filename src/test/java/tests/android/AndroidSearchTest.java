@@ -21,7 +21,7 @@ public class AndroidSearchTest extends TestBase {
     void successfulSearchTest() {
 
         searchInputComponent.clickSearchField()
-                        .typeTextSearchField("Al Pachino");
+                        .typeTextSearchField("Al Pacino");
         searchScreen.checkSearchResults();
     }
 
