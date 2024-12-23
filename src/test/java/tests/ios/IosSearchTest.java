@@ -12,7 +12,7 @@ import tests.TestBase;
 public class IosSearchTest extends TestBase {
 
     @Test
-    @DisplayName("Проверить, что 'поиск' работает")
+    @DisplayName("Проверить, что механизм поиска работает")
     public void successfulSearchTest() {
 
         String query = "Appium";
@@ -27,7 +27,7 @@ public class IosSearchTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверить, что поиск статей работает")
+    @DisplayName("Проверить отображение элементов на экране главного меню")
     public void successfulCheckExistTextTest() {
 
         SampleAppMainScreen mainScreen = new SampleAppMainScreen();
