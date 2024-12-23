@@ -9,9 +9,9 @@ import static io.appium.java_client.AppiumBy.*;
 public class ArticleScreen {
 
         @Step("Нажать на строку ввода текста в поле поиска")
-        public ArticleScreen checkArticleName() {
+        public ArticleScreen checkArticleName(String articleTitle) {
 
-            $(className("android.widget.TextView")).shouldHave(Condition.text("Russia"));
+            $(className("android.widget.TextView")).shouldHave(Condition.text(articleTitle));
 
             return this;
         }

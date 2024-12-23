@@ -8,7 +8,8 @@ import screens.android.SearchScreen;
 import screens.android.components.SearchInputComponent;
 import tests.TestBase;
 
-
+@Tag("android")
+@DisplayName("Проверки для Android")
 public class AndroidSearchTest extends TestBase {
 
     SearchInputComponent searchInputComponent = new SearchInputComponent();
@@ -16,7 +17,6 @@ public class AndroidSearchTest extends TestBase {
     ErrorScreen errorScreen = new ErrorScreen();
 
     @Test
-    @Tag("android")
     @DisplayName("Проверка механизма поиска Wikipedia")
     void successfulSearchTest() {
 
@@ -26,12 +26,11 @@ public class AndroidSearchTest extends TestBase {
     }
 
     @Test
-    @Tag("android")
     @DisplayName("Проверка появления ошибки открытия статьи после успешного поискового запроса")
     void openArticleAfterSuccessfulSearchTest() {
 
         searchInputComponent.clickSearchField()
-                .typeTextSearchField("Al Pachino");
+                .typeTextSearchField("Al Pacino");
         searchScreen.checkSearchResults()
                 .openArticle();
         errorScreen.checkError("An error occurred");
