@@ -16,7 +16,7 @@ public class SearchScreen {
         return this;
     }
 
-    @Step("Проверить наличие результатов поиска")
+    @Step("Открыть первую статью из результатов поиска")
     public SearchScreen openArticle() {
 
         $$(id("org.wikipedia.alpha:id/page_list_item_title")).first().click();
