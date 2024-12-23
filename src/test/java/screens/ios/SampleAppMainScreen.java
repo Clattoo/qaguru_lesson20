@@ -8,7 +8,7 @@ import static io.appium.java_client.AppiumBy.name;
 
 public class SampleAppMainScreen {
 
-    @Step("Проверить наличие надписи")
+    @Step("Проверить наличие надписи {text}")
     public SampleAppMainScreen checkExistText(String text) {
 
         $(name(text)).shouldBe(exist);
