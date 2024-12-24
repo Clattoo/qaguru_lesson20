@@ -2,8 +2,10 @@ package config;
 
 import org.aeonbits.owner.Config;
 
+@EnvironmentConfig.LoadPolicy(AppConfig.LoadType.FIRST)
 @Config.Sources({
-        "classpath:properties/${env}.properties"
+        "classpath:properties/${env}.properties",
+        "classpath:properties/android.properties"
 })
 public interface EnvironmentConfig extends Config {
 
